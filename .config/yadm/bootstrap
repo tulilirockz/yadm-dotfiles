@@ -1,19 +1,21 @@
 #!/bin/bash
 
-git clone https://github.com/tulilirockz/setup-scripts.git /tmp/setup-scripts
+if [ ! -e /tmp/setup-scripts ] ; then
+	git clone https://github.com/tulilirockz/setup-scripts.git /tmp/setup-scripts
+fi
 
 if ! command -v just ; then
 	curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to "$HOME/.local/bin"
 fi
 
-echo "Which kind of system do you have?"
+if ! command -v fzf ; then
+	echo "Make sure you have FZF!"
+	exit 1	
+fi
+
+echo "Which system are you using? - Remember, you'll need to re-select it to run multiple recipes"
 select SYSTEM in debian ubuntu
 do
 	~/.local/bin/just -f /tmp/setup-scripts/"$SYSTEM.justfile" --unstable --choose
 done
 
-if command -v fish ; then
-	chsh -s /usr/bin/fish
-	curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-	fish -c 'omf install chain'
-fi
