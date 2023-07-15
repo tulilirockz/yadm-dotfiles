@@ -7,9 +7,9 @@ if ! command -v just ; then
 fi
 
 echo "Which kind of system do you have?"
-select system in debian ubuntu
+select SYSTEM in debian ubuntu
 do
-	~/.local/bin/just -f /tmp/setup-scripts/"$SELECTED.justfile" --unstable --choose
+	~/.local/bin/just -f /tmp/setup-scripts/"$SYSTEM.justfile" --unstable --choose
 done
 
 if command -v fish ; then
