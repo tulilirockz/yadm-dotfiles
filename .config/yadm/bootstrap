@@ -1,11 +1,19 @@
 #!/bin/bash
 
-function set_fish_stuff {
+git clone https://github.com/tulilirockz/setup-scripts.git /tmp/setup-scripts
+
+if ! command -v just ; then
+	curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to "$HOME/.local/bin"
+fi
+
+echo "Which kind of system do you have?"
+select system in debian ubuntu
+do
+	~/.local/bin/just -f /tmp/setup-scripts/"$SELECTED.justfile" --unstable --choose
+done
+
+if command -v fish ; then
 	chsh -s /usr/bin/fish
 	curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 	fish -c 'omf install chain'
-}
-
-if command -v fish ; then
-	set_fish_stuff
 fi
