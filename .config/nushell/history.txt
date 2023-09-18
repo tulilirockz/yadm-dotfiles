@@ -1,0 +1,37 @@
+ls
+clear
+ls .
+ls -R .
+ls -r
+ls --help
+ls **/**
+clear
+cd opt/ToldosMania/
+ls
+pnpm
+echo $env.HOME
+ls
+exit
+cd .local/share/pnpm/
+ls
+cd store
+ls -lah
+ls
+cd v3
+ls
+cd files/
+du
+dust
+grep
+grep -r
+grep -r hi
+clear
+grep -r '--force'
+grep -r '\-\-force'
+grep -rR '\-\-force'
+grep -rE '\-\-force'
+grep -rE '/\-\-force/'
+cls
+ls
+nvim
+exit

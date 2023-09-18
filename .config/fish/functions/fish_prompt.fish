@@ -1,0 +1,1 @@
+/var/home/tulili/.local/share/omf/themes/boxfish/fish_prompt.fish
