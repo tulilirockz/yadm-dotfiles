@@ -8,8 +8,3 @@
 	gpgsign = true
 [init]
 	defaultBranch = main
-[credential]
-	helper = "!f() { /var/home/tulili/.vscode-server-insiders/bin/083fca132543aa91a7e1de2dc23857d70ea56dd3-insider/node /tmp/vscode-remote-containers-669ad663-5e3c-447a-9224-4801e9d6bb1c.js git-credential-helper $*; }; f"
-[safe]
-	directory = /var/home/tulili/opt/bazzite
-	directory = /var/home/tulili/opt/ToldosManiaCool
