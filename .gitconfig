@@ -1,7 +1,7 @@
 [user]
 	name = tulili
 	email = tulilirockz.pub+git@gmail.com
-	signingkey = /home/tulili/.ssh/git.pub
+	signingkey = /var/home/tulili/.ssh/id_ed25519.pub
 [gpg]
 	format = ssh
 [commit]

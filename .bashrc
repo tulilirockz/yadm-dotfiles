@@ -106,3 +106,6 @@ done
 unset use_color sh
 alias just="/bin/just --unstable"
 echo "$(uname -a)\n$USER@$HOSTNAME $(uptime -p)"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
