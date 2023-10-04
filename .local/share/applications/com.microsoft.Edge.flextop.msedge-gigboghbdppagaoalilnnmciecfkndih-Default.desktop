@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Hachyderm.io
+Exec=flatpak 'run' '--command=/app/bin/edge' 'com.microsoft.Edge' '--profile-directory=Default' '--app-id=gigboghbdppagaoalilnnmciecfkndih' '--app-url=https://hachyderm.io/home'
+Icon=msedge-gigboghbdppagaoalilnnmciecfkndih-Default
+StartupWMClass=crx__gigboghbdppagaoalilnnmciecfkndih
+Actions=Compose-new-post;Notifications
+
+X-Flatpak-Part-Of=com.microsoft.Edge
+TryExec=/home/tulili/.local/share/flatpak/exports/bin/com.microsoft.Edge
+
+[Desktop Action Compose-new-post]
+Name=Compose new post
+Exec=flatpak 'run' '--command=/app/bin/edge' 'com.microsoft.Edge' '--profile-directory=Default' '--app-id=gigboghbdppagaoalilnnmciecfkndih' '--app-url=https://hachyderm.io/home' '--app-launch-url-for-shortcuts-menu-item=https://hachyderm.io/publish'
+
+[Desktop Action Notifications]
+Name=Notifications
+Exec=flatpak 'run' '--command=/app/bin/edge' 'com.microsoft.Edge' '--profile-directory=Default' '--app-id=gigboghbdppagaoalilnnmciecfkndih' '--app-url=https://hachyderm.io/home' '--app-launch-url-for-shortcuts-menu-item=https://hachyderm.io/notifications'

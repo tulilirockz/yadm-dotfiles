@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Nimbus
+GenericName=Terminal entering Nimbus
+Comment=Terminal entering Nimbus
+Categories=Distrobox;System;Utility
+Exec=/usr/bin/distrobox enter  nimbus
+Icon=/home/tulili/.local/share/icons/distrobox/fedora.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application

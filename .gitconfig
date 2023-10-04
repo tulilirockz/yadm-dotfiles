@@ -1,6 +1,6 @@
 [user]
-	name = tulili
-	email = tulilirockz.pub+git@gmail.com
+	name = Tulili
+	email = tulilirockz@outlook.com
 	signingkey = /var/home/tulili/.ssh/id_ed25519.pub
 [gpg]
 	format = ssh
